@@ -31,7 +31,11 @@ export const useAgentAPI = (subjectName: string, mcqNumber: number = 10) => {
     staleTime: Infinity,
     select: (data) => {
      try{
-       return JSON.parse(data.choices[0].message.content)
+       const content = data.choices[0].message.content;
+       if (!content) {
+         throw new Error("Content is null or empty");
+       }
+       return JSON.parse(content);
      }
      catch{
       console.log("Json Is not valide")
