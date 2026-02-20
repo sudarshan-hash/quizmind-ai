@@ -37,7 +37,6 @@ const MCQ = ({
   setWrongAns,
   resultStyle,
 }: Props): JSX.Element => {
-  console.log("MCQ Render")
   // function for handaling the on chage event
   function answerArray(
     value: string,
