@@ -3,7 +3,7 @@
 QuizMind is an AI-powered MCQ platform built with React + TypeScript. It helps students generate, solve, and review topic-wise multiple-choice questions in one place.
 
 ## Live Demo
-`https://quizmindai.netlify.app/`
+https://quizmindai.netlify.app/
 
 ## Why This Project
 - Students often jump between tools for question generation, practice, and evaluation.
