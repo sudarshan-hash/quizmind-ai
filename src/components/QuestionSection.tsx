@@ -193,7 +193,7 @@ function QuestionSection({
 
   // ------------------------------------------------
   // API calling
-  const {isLoading, data: MCQs , isError, error, isSuccess} = useAgentAPI(subjectName, 10)
+  const {isLoading, data: MCQs , isError, error} = useAgentAPI(subjectName, 10)
   // ------------------------------------------------
 
   if (isError) {
@@ -202,11 +202,6 @@ function QuestionSection({
     return <Error /> 
   }
   
-  if (isSuccess) {
-    console.log("Is Success...")
-    console.log(subjectName, MCQs)
-  }
-
   if (isLoading) {
     return <MCQLoader />
   }

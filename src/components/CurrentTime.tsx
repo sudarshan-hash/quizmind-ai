@@ -15,7 +15,6 @@ function CurrentTime() {
       clearInterval(interval);
     };
   }, []);
-  console.log("By time rendaring")
   return (
     <div>
       <span className="  text-foreground font-sans font-bold ">

@@ -80,7 +80,7 @@ const SidebarPage = () => {
         <div className="flex flex-1 flex-col justify-around ">
           <header className="bg-card sticky top-0 z-50 flex h-13.75 items-center justify-between gap-6 border-b px-4 py-2 sm:px-6">
             <SidebarTrigger className="[&_svg]:size-5! cursor-pointer " />
-            <h1 className="  text-chart-3 text-2xl  inline font-bold  ">
+            <h1 className="  text-chart-3 text-1xl sm:text-2xl  inline font-bold  ">
               {subjectName.toUpperCase()}{" "}
             </h1>
             <span className="  sm:block ">
