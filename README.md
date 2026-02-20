@@ -2,6 +2,9 @@
 
 **QuizMind** is an AI-powered Multiple Choice Question (MCQ) Generator built with **React**, **TypeScript**, and **Groq SDK**. It streamlines the creation of high-quality practice questions for any subject using advanced AI models.
 
+## Live Demo
+https://quizmindai.netlify.app/
+
 ## 📖 Introduction
 
 **QuizMind** simplifies the process of finding and generating quality MCQs. By leveraging the **Groq API**, it allows users to instantly generate structured, subject-specific quizzes with instant feedback, creating a seamless and interactive learning experience.
