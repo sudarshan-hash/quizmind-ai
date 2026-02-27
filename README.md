@@ -22,7 +22,8 @@ https://quizmindai.netlify.app/
 - React 19 + Vite
 - TypeScript
 - GROQ SDK (`groq-sdk`)
-- TanStack Query 
+- TanStack Query
+- TanStack Hotkeys
 - Tailwind CSS 
 - shadcn/ui + Radix primitives
 - React Router 
