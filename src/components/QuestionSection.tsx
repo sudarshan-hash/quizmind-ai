@@ -17,6 +17,7 @@ import { Check, X } from "lucide-react";
 import { useAgentAPI } from "@/hooks/use-fetch-AI";
 import MCQLoader from "./MCQLoader";
 import Error from "./Error";  
+import { formatForDisplay, useHotkey } from "@tanstack/react-hotkeys";
 
 // MCQ component Props interface
 interface Props {
@@ -190,6 +191,10 @@ function QuestionSection({
   ]);
   const [resultStyle, setResultStyle] = useState<boolean>(false);
 
+  // Add keyShortcut for submit result
+  // ctrl+Enter --> submit result
+  useHotkey("Mod+Enter", ()=>{ setResultStyle(true) }, {enabled: rightAns.length + wrongAns.length - 2 === 10 } )
+
   // ------------------------------------------------
   // API calling
   const {isLoading, data: MCQs , isError, error} = useAgentAPI(subjectName, 10)
@@ -230,8 +235,9 @@ function QuestionSection({
               rightAns.length + wrongAns.length - 2 !== MCQs.length
             }
           >
-            <a href="#result">Check Ruslt</a>
+            <a href="#result">Check Result</a>
           </Button>
+            <p className=" pl-2 hidden sm:block text-muted-foreground " > press  <kbd className=" underline" >{ formatForDisplay("Mod+Enter") }</kbd> </p>
         </div>
       </Card>
       {resultStyle && (

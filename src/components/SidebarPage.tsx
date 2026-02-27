@@ -18,10 +18,14 @@ import { Button } from "./ui/button";
 import QuestionSection from "./QuestionSection";
 import CurrentTime from "./CurrentTime";
 import { Badge } from "./ui/badge";
+import { formatForDisplay, useHotkey } from "@tanstack/react-hotkeys";
 
 const SidebarPage = () => {
   const [subjectName, setSubjectName] = useState<string>("Java Script");
   const [isStart, setIsStart] = useState<boolean>(false);
+  // Adding the keyShortcut 
+  // Enter --> to start
+  useHotkey("Enter", ()=>{ setIsStart(true) })
   return (
     <div className="flex min-h-dvh w-full">
       <SidebarProvider>
@@ -109,6 +113,7 @@ const SidebarPage = () => {
                       {" "}
                       Click To Start{" "}
                     </Button>
+                    <p className=" ml-5 hidden sm:block text-muted-foreground " > or press <kbd className=" underline" >{ formatForDisplay("Enter") }</kbd> </p>
                   </CardFooter>
                 </CardContent>
               </Card>

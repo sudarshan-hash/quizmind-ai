@@ -3,9 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { type JSX } from "react";
 import { useNavigate } from "react-router";
+import { useHotkey, formatForDisplay } from '@tanstack/react-hotkeys'
 
 const HeroSection = (): JSX.Element => {
+  // useHotKey hook by tanstack hotkey
   const navigate = useNavigate();
+  useHotkey( "Enter", ()=>{ navigate("/mcq") } )
   return (
     <section
       id="hero"
@@ -69,6 +72,7 @@ const HeroSection = (): JSX.Element => {
         >
           Solve it Now
         </Button>
+        <p className=" -mt-7 hidden sm:block text-muted-foreground " > press <kbd className=" underline" >{ formatForDisplay("Enter") }</kbd> </p>
       </div>
     </section>
   );
