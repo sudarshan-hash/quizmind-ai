@@ -3,12 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { type JSX } from "react";
 import { useNavigate } from "react-router";
-import { useHotkey, formatForDisplay } from '@tanstack/react-hotkeys'
+import { formatForDisplay, useHotkey } from '@tanstack/react-hotkeys'
 
 const HeroSection = (): JSX.Element => {
   // useHotKey hook by tanstack hotkey
   const navigate = useNavigate();
-  useHotkey( "Enter", ()=>{ navigate("/mcq") } )
+  useHotkey( "Mod+Enter", ()=>{ navigate("/mcq") } )
   return (
     <section
       id="hero"
@@ -71,8 +71,8 @@ const HeroSection = (): JSX.Element => {
           }}
         >
           Solve it Now
+        <p className=" hidden sm:block text-muted-foreground " > <kbd>{formatForDisplay("Mod+")}</kbd>Enter  </p>
         </Button>
-        <p className=" -mt-7 hidden sm:block text-muted-foreground " > press <kbd className=" underline" >{ formatForDisplay("Enter") }</kbd> </p>
       </div>
     </section>
   );
