@@ -17,7 +17,7 @@ import { Check, X } from "lucide-react";
 import { useAgentAPI } from "@/hooks/use-fetch-AI";
 import MCQLoader from "./MCQLoader";
 import Error from "./Error";  
-import { formatForDisplay, useHotkey } from "@tanstack/react-hotkeys";
+import {  formatForDisplay, useHotkey } from "@tanstack/react-hotkeys";
 
 // MCQ component Props interface
 interface Props {
@@ -236,8 +236,8 @@ function QuestionSection({
             }
           >
             <a href="#result">Check Result</a>
+            <p className=" hidden sm:block text-muted-foreground " > <kbd>{formatForDisplay("Mod+")}</kbd>Enter   </p>
           </Button>
-            <p className=" pl-2 hidden sm:block text-muted-foreground " > press  <kbd className=" underline" >{ formatForDisplay("Mod+Enter") }</kbd> </p>
         </div>
       </Card>
       {resultStyle && (
