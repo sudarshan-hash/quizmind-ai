@@ -236,7 +236,7 @@ function QuestionSection({
             }
           >
             <a href="#result">Check Result</a>
-            <p className=" hidden sm:block text-muted-foreground " > <kbd>{formatForDisplay("Mod+")}</kbd>Enter  </p>
+            <p className=" hidden sm:block text-muted-foreground " > <kbd>{formatForDisplay("Mod+")}</kbd>Enter   </p>
           </Button>
         </div>
       </Card>

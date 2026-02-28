@@ -71,7 +71,7 @@ const HeroSection = (): JSX.Element => {
           }}
         >
           Solve it Now
-        <p className=" hidden sm:block text-muted-foreground " > <kbd>{formatForDisplay("Mod+")}</kbd>Enter  </p>
+        <p className=" hidden sm:block text-muted-foreground " > <kbd>{formatForDisplay("Mod+")}</kbd>Enter   </p>
         </Button>
       </div>
     </section>

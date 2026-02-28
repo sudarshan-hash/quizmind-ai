@@ -18,7 +18,7 @@ import { Button } from "./ui/button";
 import QuestionSection from "./QuestionSection";
 import CurrentTime from "./CurrentTime";
 import { Badge } from "./ui/badge";
-import { useHotkey } from "@tanstack/react-hotkeys";
+import { useHotkey  } from "@tanstack/react-hotkeys";
 
 const SidebarPage = () => {
   const [subjectName, setSubjectName] = useState<string>("Java Script");
