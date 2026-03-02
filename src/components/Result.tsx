@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import type { RightAnswer, WrongAnswer } from "@/constant/type";
-import { useNavigate } from "react-router";
+import { useNavigate } from "@tanstack/react-router";
 import {
   Card,
   CardContent,
@@ -68,7 +68,7 @@ export function Result({
           <Button
             size={"sm"}
             onClick={() => {
-              navigate("/");
+              navigate({ to: "/" });
             }}
           >
             Home

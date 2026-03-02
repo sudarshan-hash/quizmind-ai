@@ -1,14 +1,20 @@
+import { createFileRoute } from '@tanstack/react-router'
+
 import { Theme } from "@/components";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { type JSX } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from '@tanstack/react-router';
 import { formatForDisplay, useHotkey } from '@tanstack/react-hotkeys'
 
-const HeroSection = (): JSX.Element => {
+export const Route = createFileRoute('/')({
+  component: Index,
+})
+
+function Index(): JSX.Element {
   // useHotKey hook by tanstack hotkey
   const navigate = useNavigate();
-  useHotkey( "Mod+Enter", ()=>{ navigate("/mcq") } )
+  useHotkey( "Mod+Enter", ()=>{ navigate({to: "/mcq"}) } )
   return (
     <section
       id="hero"
@@ -67,7 +73,7 @@ const HeroSection = (): JSX.Element => {
         <Button
           size="lg"
           onClick={() => {
-            navigate("/mcq");
+            navigate({to: "/mcq"});
           }}
         >
           Solve it Now
@@ -78,4 +84,4 @@ const HeroSection = (): JSX.Element => {
   );
 };
 
-export default HeroSection;
+
