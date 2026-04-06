@@ -13,6 +13,7 @@ dist-ssr
 *.local
 .env
 LINKEDIN_POST.md
+resume.text
 
 
 # Editor directories and files
