@@ -26,7 +26,8 @@ https://quizmindai.netlify.app/
 - TanStack Hotkeys
 - Tailwind CSS 
 - shadcn/ui + Radix primitives
-- React Router 
+- React Router
+- FastAPI Backend 
 
 ## Fresh MCQ behavior:
 - New subject => new API call => new set.
