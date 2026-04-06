@@ -23,10 +23,10 @@ https://quizmindai.netlify.app/
 - TypeScript
 - GROQ SDK (`groq-sdk`)
 - TanStack Query
+- TanStack Router
 - TanStack Hotkeys
 - Tailwind CSS 
 - shadcn/ui + Radix primitives
-- React Router
 - FastAPI Backend 
 
 ## Fresh MCQ behavior:
@@ -74,9 +74,10 @@ src/
 |   `-- type.ts            # TypeScript types
 |-- hooks/
 |   `-- use-fetch-AI.ts    # GROQ + TanStack Query hook
-|-- pages/
-|   |-- HeroSection.tsx
-|   `-- McqSection.tsx
+|-- routes/
+|   |-- root.tsx
+|   `-- index.tsx
+    | -- mcq.tsx
 |-- style/
 |   `-- globale css/global.css
 |-- App.tsx
