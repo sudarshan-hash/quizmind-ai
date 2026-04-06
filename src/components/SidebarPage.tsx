@@ -3,6 +3,7 @@ import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card";
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -19,6 +20,7 @@ import QuestionSection from "./QuestionSection";
 import CurrentTime from "./CurrentTime";
 import { Badge } from "./ui/badge";
 import { useHotkey  } from "@tanstack/react-hotkeys";
+import FeedBackForm from "./FeedbackForm";
 
 const SidebarPage = () => {
   const [subjectName, setSubjectName] = useState<string>("Java Script");
@@ -80,6 +82,9 @@ const SidebarPage = () => {
               </SidebarGroupContent>
             </SidebarGroup>
           </SidebarContent>
+          <SidebarFooter > 
+            <FeedBackForm className="w-full shadow-2xl" />  
+           </SidebarFooter>
         </Sidebar>
         <div className="flex flex-1 flex-col justify-around ">
           <header className="bg-card sticky top-0 z-50 flex h-13.75 items-center justify-between gap-6 border-b px-4 py-2 sm:px-6">

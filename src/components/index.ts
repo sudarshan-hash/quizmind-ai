@@ -4,5 +4,6 @@ import { Result } from "./Result";
 import Theme from "./Theme";
 import MCQLoader from "./MCQLoader";
 import Error from "./Error";
+import FeedBackForm from "./FeedbackForm";
 
-export {CurrentTime, QuestionSection, Result, Theme, MCQLoader, Error}
+export {CurrentTime, QuestionSection, Result, Theme, MCQLoader, Error, FeedBackForm}
