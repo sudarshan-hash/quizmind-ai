@@ -14,10 +14,10 @@ import { Label } from "./ui/label";
 import { Button } from "./ui/button";
 import { Result } from "./Result";
 import { Check, X } from "lucide-react";
-import { useAgentAPI } from "@/hooks/use-fetch-AI";
 import MCQLoader from "./MCQLoader";
 import Error from "./Error";  
 import {  formatForDisplay, useHotkey } from "@tanstack/react-hotkeys";
+import { useAgentAPI } from "@/hooks/use-fetch-AI";
 
 // MCQ component Props interface
 interface Props {
@@ -197,7 +197,7 @@ function QuestionSection({
 
   // ------------------------------------------------
   // API calling
-  const {isLoading, data: MCQs , isError, error} = useAgentAPI(subjectName, 10)
+  const {isLoading, data: MCQs , isError, error} = useAgentAPI(subjectName)
   // ------------------------------------------------
 
   if (isError) {

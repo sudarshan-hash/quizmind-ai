@@ -1,9 +1,9 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "@tanstack/react-router";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 
 function Error() {
-    const navigate = useNavigate()
+  const navigate = useNavigate()
   return (
     <Card className="max-w-md mx-auto px-6  ">
       <div className="flex flex-col items-center justify-center  py-3 text-center">
@@ -13,7 +13,7 @@ function Error() {
           The page you&apos;re looking for isn&apos;t found, we suggest you back
           to home.
         </p>
-        <Button  onClick={()=>{ navigate("/") }} size="lg" className="rounded-lg text-base">
+        <Button  onClick={()=>{ navigate({to: "/"}) }} size="lg" className="rounded-lg text-base">
           Back To Home
         </Button>
       </div>
