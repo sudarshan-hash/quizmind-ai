@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "ai.quizmindai.twa",
+    "sha256_cert_fingerprints": ["AB:A1:92:3E:4E:ED:8E:44:7E:38:21:FA:5A:49:90:31:9A:9E:27:9F:7B:BA:A2:5A:6D:16:FC:E8:97:6F:64:CF"]
+  }
+}]
